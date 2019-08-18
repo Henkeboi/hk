@@ -1,0 +1,69 @@
+Application architecture dictates how the application is structured over end systems. Examples are client-server and peer to peer(P2P)
+A network application consists of pairs of processes that send messahes to each other over a network
+A process sends messages into and receives messages from a software interface called socket
+A socket is the interface between the application and transport layer
+Socket or API - Application programming interface
+Hosts are identified by IP and the process running on a host is identified by a port number
+Sockets proggrammers can choose different transport protocols:
+Reliable data transfer, throughput, timing and security
+The available transport protocols are TCP and UDP
+TCP: Reliable data transfer and connection oriented
+TCP can be enhanced with SSL - Secure socket layer to encrypt messages
+UDP: No-frills, lightweight transport protocol - unreliable and connectionless
+An application layer protocol defines how an processes pass messages
+
+HTTP - Hypertext transfer protocol is the Webs application layer protocol
+HTTP is implemented in to programs - a client and a server program
+HTTP uses TCP as its transport protocol
+HTTP is stateless because an HTTP server doesnt maintain information about the clients
+Uses presistent connections by standard
+Non-presistent connection - Separate TCP connection for each request and response
+A non-presisten TCP connection closes when the server has sendt the requested object
+Presistent connection - One TCP connection for all requests and responses
+HTTP can use both non-presistent and presitent connections
+There are two typse of HTTP messages: Requests and responses
+Many HTTP servers use cookies
+A web cache or proxy server is a network entity that satisfies HTTP requests on behalf of the original server. 
+A proxy server is both a server and a client
+A conditional get allows proxy servers to stay updated at a low cost
+
+Electronic mail
+User agents are used to read and compose mail
+User agents sends mail to the users mail server where the user has a mail box
+The mail server sends the mail to the mailserver of the reciver, normally directly
+SMTP is the application protocol of email - Simple mail transfer protocol
+SMTP uses TCP
+SMTP is old and only allows ASCII characters in the body of the email
+SMTP is running as a client and server on every email server
+By default uses port 25
+SMPT uses a presistent connection
+SMPT is a push protocol - the sending mail server pushes the file to the reciver
+HTTP is a pull protocol - the users pulls information from a server at convenience
+Therer are multiple mail access protocols: HTTP, Internet Mail Access Protocol and Post Office Protocol
+POP3 is simple and limited: Authorization, ransaction and update
+IMAP: More features than POP3 for example able to create folders at the server side. More complex
+Using the browser as a client is possible with HTTP 
+
+DNS - Domain name service
+Hosts are identified by hostnames and IP addresses
+THe DNS is a distributed database implemented in a hierarchy of DNS servers and a application layer protocol that allows host to query the distributed database
+The DNS protocol runs over UDP and uses port 53
+HTTP and SMTP use the client side of DNS to query a DNS server to obtain ip addresses
+DNS provide host aliasing, mail server aliasing and load distribution
+DNS has root, top level domain and authoritative servers
+Every ISP has a local DNS server that acts as a proxy server
+The queries from the requesting host to the local DNS are recursive if the local DNS doesnt have the requested mapping stored
+The queries from the local DNS server to the DNS hierarchy is typically iterative
+
+Peer to peer file distribution
+BitTorrent is the most popular P2P file distribution protocol
+
+
+Video streaming and content distribution networks
+HTTP streaming is possible, but all clients get the same encoding of the video independen
+t of download speeds
+DASH - Dynamic adaptive streaming over HTTP - allows different encodings depending on download speeds
+CDN - Content distribution networks
+
+Socket programming
+Two types of network applicaitons: the apllication operations are specified in a protocol standard or the network application is proprietary
