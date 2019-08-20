@@ -1,7 +1,7 @@
 #ifndef __FILE__HPP__
 #define __FILE__HPP__
 
-#include "buffer.hpp"
+#include "text_buffer.hpp"
 
 class file {
 public:
@@ -17,10 +17,10 @@ public:
     void delete_symbols(int x_start, int y_start, int x_end, int y_end);
     std::wstring get_line(int line_number);
     bool is_end_line(int line_number);
-    int get_number_of_lines();  
+    int get_number_of_lines(); 
     int next_word_index(int x_index, int line_number, int word_count);
     int prev_word_index(int x_index, int line_number, int word_count);
-    void resize();
+    int resize(int current_line_number);
 private:
     int _tab_size;
     int _left_margin;

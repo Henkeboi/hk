@@ -436,6 +436,7 @@ void text_window::display_down(int jump)
 
 void text_window::resize()
 {
-    _file.resize();
+    auto new_line_number = _file.resize(_y_curser + _buffer_start);
+    _buffer_start -= new_line_number - _y_curser - _buffer_start;
     display();
 }

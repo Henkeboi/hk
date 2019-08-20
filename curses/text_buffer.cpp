@@ -1,6 +1,7 @@
-#include "buffer.hpp"
+#include "text_buffer.hpp"
 
-std::vector<std::tuple<std::wstring, bool> >& buffer::get_buffer()
+
+std::vector<std::tuple<std::wstring, bool> >& buffer::get_lines()
 {
     return _lines;
 }
@@ -15,3 +16,7 @@ int buffer::get_number_of_lines()
     return _lines.size();
 }
 
+void buffer::clear_text()
+{
+    _lines.clear();
+}

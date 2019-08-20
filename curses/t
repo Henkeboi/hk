@@ -1,4 +1,5 @@
 Application architecture dictates how the application is structured over end systems. Examples are client-server and peer to peer(P2P)
+
 A network application consists of pairs of processes that send messahes to each other over a network
 A process sends messages into and receives messages from a software interface called socket
 A socket is the interface between the application and transport layer
@@ -67,3 +68,5 @@ CDN - Content distribution networks
 
 Socket programming
 Two types of network applicaitons: the apllication operations are specified in a protocol standard or the network application is proprietary
+
+

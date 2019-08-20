@@ -2,7 +2,7 @@
 #include "curses.h"
 
 editor::editor(std::string filename)
-: _text_window(text_window{filename}), _mode(normal), _window(text), _mode_switch_timer(std::chrono::system_clock::now()), _repeat_timer(std::chrono::system_clock::now()), _repeat_string("-1"), _exit(false)
+: _filename(filename), _text_window(text_window{filename}), _mode(normal), _window(text), _mode_switch_timer(std::chrono::system_clock::now()), _repeat_timer(std::chrono::system_clock::now()), _repeat_string("-1"), _exit(false)
 {}
 
 bool editor::open_file(std::string filename)
