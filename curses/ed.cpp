@@ -38,7 +38,6 @@ int main(int argc, char* argv[])
     } catch (...) {
         std::system("stty sane");
     }
-
     endwin();
     return 0;
 }
